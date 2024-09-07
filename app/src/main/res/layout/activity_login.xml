@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".Activity.login">
+
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/s" />
+
+    <TextView
+        android:id="@+id/tvLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Welcome Back!"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+
+      />
+
+    <TextView
+        android:id="@+id/tvLoginSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Log in to continue"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLoginTitle" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="Email"
+
+        android:background="@drawable/background_input"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLoginSubtitle" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+         android:hint="Password"
+        android:background="@drawable/background_input"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Log In"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/primary"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/tvForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Register"
+
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+
+
+</LinearLayout>

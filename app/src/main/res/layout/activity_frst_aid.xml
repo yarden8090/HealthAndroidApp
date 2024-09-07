@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.FrstAID">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/applications_of_simple_first_aid_treatments"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/teal_200"
+                android:gravity="center_horizontal"
+                android:text="@string/bleeding_control"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+
+                android:gravity="start"
+                android:paddingLeft="10dp"
+                android:text="@string/bleding_not"
+                android:textColor="@color/primary"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/teal_200"
+                android:gravity="center_horizontal"
+                android:text="@string/wound_care"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+
+                android:gravity="start"
+                android:paddingLeft="10dp"
+                android:text="@string/woundcare_not"
+                android:textColor="@color/primary"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/teal_200"
+                android:gravity="center_horizontal"
+                android:text="@string/pain_managment"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:gravity="start"
+                android:paddingLeft="10dp"
+                android:text="@string/pain_not"
+                android:textColor="@color/primary"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

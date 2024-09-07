@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="applications_of_simple_first_aid_treatments">Applications of Simple First Aid Treatments</string>
+    <string name="bleeding_control">Bleeding control</string>
+    <string name="bleding_not">The sight of blood can be alarming, but remember, most bleeding can be easily managed.\n\nDirect pressure: This is the golden rule. Apply firm, steady pressure directly over the wound using a clean cloth or sterile gauze. Hold for at least 5 minutes, and repeat if necessary.\n\nElevation: Raise the injured area above the heart to slow blood flow. This is especially effective for extremities.\n \nPressure points: In cases of severe bleeding from limbs, locate pressure points where arteries pass close to bones. Firmly press on these points for a few minutes until bleeding subsides</string>
+    <string name="wound_care">Wound Care</string>
+    <string name="woundcare_not">Once the bleedder control, it\'s time to prevent infection:\n\nCleanse the wound: Gently flush the area with clean water or sterile saline solution to remove dirt and debris.\n\nApply an antiseptic: Use a mild antiseptic like iodine or hydrogen peroxide to kill bacteria. Don\'t overdo it!\n\nCover the wound: Use a sterile bandage or dressing to protect the wound from further contamination and promote healing. Change the dressing regularly to keep it clean and dry.</string>
+    <string name="pain_managment">Pain managment</string>
+    <string name="pain_not">"Minor aches ane inevitable, but you don't have to suffer:\n\n Rest and immobilize: Give the injured area time to heal. For sprains and strains, consider using a splint or brace to keep the joint stable.l\n\nce: Apply an ice pack wrapped in a towel to the affected area for 15-20 minutes at a time, several times a day. This reduces swelling and pain.\n\nOver-the-counter pain relievers: Consider taking medications like ibuprofen or acetaminophen to manage discomfort."</string>
+    <string name="first_aid">First AID</string>
+    <string name="registration">Registration</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+
+    <string-array name="blood_types">
+        <item>A+</item>item>
+        <item>A-</item>item>
+        <item>B+</item>item>
+        <item>B-</item>item>
+        <item>AB+</item>item>
+        <item>AB-</item>item>
+        <item>O+</item>item>
+        <item>O-</item>item>
+    </string-array>
+
+
+</resources>

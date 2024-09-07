@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@android:color/white"
+    android:elevation="4dp"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Disease Name -->
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disease Name"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Symptoms -->
+    <TextView
+        android:id="@+id/symptomsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Symptoms: ..."
+        android:textColor="#555"
+        android:textSize="16sp" />
+
+    <!-- When to see a doctor -->
+    <TextView
+        android:id="@+id/whenToSeeDoctorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="When to see a doctor: ..."
+        android:textColor="#FF5722"
+        android:textSize="16sp" />
+
+</LinearLayout>

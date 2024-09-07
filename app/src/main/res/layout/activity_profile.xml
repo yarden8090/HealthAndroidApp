@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:contentDescription="Profile Image"
+            android:src="@drawable/s" />
+
+        <!-- Name -->
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="44dp"
+            android:textColorHint="@color/secondary_text"
+            android:background="@drawable/background_input"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+
+        <!-- Phone Number -->
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="44dp"
+            android:textColorHint="@color/secondary_text"
+            android:background="@drawable/background_input"
+            android:hint="Phone Number"
+            android:inputType="phone" />
+
+        <!-- Height -->
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="44dp"
+            android:textColorHint="@color/secondary_text"
+            android:background="@drawable/background_input"
+            android:hint="Height (cm)"
+            android:inputType="numberDecimal" />
+
+        <!-- Weight -->
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="44dp"
+            android:textColorHint="@color/secondary_text"
+            android:background="@drawable/background_input"
+            android:hint="Weight (kg)"
+            android:inputType="numberDecimal" />
+
+        <!-- Emergency Contact -->
+        <EditText
+            android:id="@+id/editTextEmergencyContact"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="44dp"
+            android:textColorHint="@color/secondary_text"
+            android:background="@drawable/background_input"
+            android:hint="Emergency Contact"
+            android:inputType="phone" />
+
+        <!-- Blood Type -->
+        <Spinner
+            android:id="@+id/spinnerBloodType"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="44dp"
+            android:textColorHint="@color/secondary_text"
+            android:background="@drawable/background_input" />
+
+        <!-- Location -->
+        <EditText
+            android:id="@+id/editTextLocation"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="44dp"
+            android:textColorHint="@color/secondary_text"
+            android:background="@drawable/background_input"
+            android:hint="Location"
+            android:inputType="textPostalAddress" />
+
+        <!-- Update Profile Button -->
+        <Button
+            android:id="@+id/buttonUpdateProfile"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="44dp"
+            android:textColorHint="@color/secondary_text"
+            android:backgroundTint="@color/teal_700"
+            android:text="Update Profile" />
+
+        <!-- Delete Account Button -->
+        <Button
+            android:id="@+id/buttonDeleteAccount"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="44dp"
+            android:textColorHint="@color/secondary_text"
+            android:backgroundTint="@color/error"
+            android:text="Delete Account"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>

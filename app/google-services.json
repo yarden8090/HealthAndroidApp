@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "326385040948",
+    "firebase_url": "https://health-eliyayarden-default-rtdb.firebaseio.com",
+    "project_id": "health-eliyayarden",
+    "storage_bucket": "health-eliyayarden.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326385040948:android:81796fe3e624aa3c649461",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD18JjBDEQ7W5Ih5HVBA03ipvmcDdHdBeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
