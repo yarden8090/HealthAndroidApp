@@ -29,13 +29,10 @@ import com.google.android.gms.tasks.Task;
 
 public class login extends AppCompatActivity {
 
-    private EditText etEmail, etPassword;
-    private Button btnLogin;
-    private TextView tvForgotPassword;
 
+    private TextView registerBtn;
     private EditText emailTextView, passwordTextView;
-    private Button Btn;
-    private ProgressBar progressbar;
+    private Button Btn;//login
     private FirebaseAuth mAuth;
 
     @Override
@@ -47,12 +44,8 @@ public class login extends AppCompatActivity {
         emailTextView = findViewById(R.id.etEmail);
         passwordTextView = findViewById(R.id.etPassword);
         Btn = findViewById(R.id.btnLogin);
-        tvForgotPassword = findViewById(R.id.tvForgotPassword);
+        registerBtn = findViewById(R.id.tvForgotPassword);
 
-        String email, password;
-        email = emailTextView.getText().toString();
-        password = passwordTextView.getText().toString();
-        // Set on Click Listener on Sign-in button
         Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +53,7 @@ public class login extends AppCompatActivity {
 
             }
         });
-        tvForgotPassword.setOnClickListener(new View.OnClickListener() {
+        registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(login.this, registration.class));
@@ -69,18 +62,13 @@ public class login extends AppCompatActivity {
     }
 
     private void loginUserAccount() {
-
-        // show the visibility of progress bar to show loading
-       // progressbar.setVisibility(View.VISIBLE);
-
         // Take the value of two edit texts in Strings
         String email, password;
         email = emailTextView.getText().toString();
         password = passwordTextView.getText().toString();
 
-        if (email.equals("adminac") && password.equals("adminpas")){
-           // startActivity(new Intent(login.this, admindash.class));
-
+        if (email.isEmpty() && password.isEmpty()){
+            Toast.makeText(getApplicationContext(), "enter mail/ pass!!", Toast.LENGTH_LONG).show();
         }else {
             // signin existing user
             mAuth.signInWithEmailAndPassword(email, password)
@@ -92,33 +80,14 @@ public class login extends AppCompatActivity {
                                     if (task.isSuccessful()) {
 
                                         Toast.makeText(getApplicationContext(), "Login successful!!", Toast.LENGTH_LONG).show();
-
-
-                                        // hide the progress bar
-                                        // progressbar.setVisibility(View.GONE);
-                                        // if sign-in is successful
-                                        // intent to home activity
                                         Intent intent = new Intent(login.this, MainActivity.class);
                                         startActivity(intent);
                                     } else {
                                         // sign-in failed
                                         Toast.makeText(getApplicationContext(), "Login failed!!", Toast.LENGTH_LONG).show();
-                                        // hide the progress bar
-                                        // progressbar.setVisibility(View.GONE);
                                     }
                                 }
                             });
         }
-        // validations for input email and password
-      /*  if (TextUtils.isEmpty(email)) {
-            Toast.makeText(getApplicationContext(), "Please enter email!!", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(), "Please enter password!!", Toast.LENGTH_LONG).show();
-            return;
-        }*/
-
     }
 }

@@ -44,10 +44,10 @@ public class ProfileActivity extends AppCompatActivity {
     private Spinner spinnerBloodType;
     private Button buttonUpdateProfile, buttonDeleteAccount;
 
-    private DatabaseReference mDatabaseRef;
-    private StorageReference mStorageRef;
-    private FirebaseAuth mAuth;
-    private FirebaseUser mUser;
+    private DatabaseReference mDatabaseRef;  //realtime
+    private StorageReference mStorageRef;//pic
+    private FirebaseAuth mAuth; //autentication
+    private FirebaseUser mUser;//user
     private Uri imageUri;
     private String imageUrl;
 
@@ -59,8 +59,8 @@ public class ProfileActivity extends AppCompatActivity {
         // Initialize Firebase
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Users").child(mUser.getUid());
-        mStorageRef = FirebaseStorage.getInstance().getReference("uploads");
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Users").child(mUser.getUid()); //users root
+        mStorageRef = FirebaseStorage.getInstance().getReference("uploads"); //uploads root - storage
 
         // Initialize Views
         imageViewProfile = findViewById(R.id.imageViewProfile);

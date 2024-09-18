@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">HealthTip</string>
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
     <string name="applications_of_simple_first_aid_treatments">Applications of Simple First Aid Treatments</string>

@@ -29,7 +29,6 @@ public class Emergency extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency);
 
-        // Initialize buttons
         btnPolice = findViewById(R.id.btnPolice);
         btnAmbulance = findViewById(R.id.btnAmbulance);
         btnFire = findViewById(R.id.btnFire);
@@ -53,7 +52,6 @@ public class Emergency extends AppCompatActivity {
         btnSOS.setOnClickListener(view -> {
             // Example action for SOS button
             Toast.makeText(Emergency.this, "SOS Alert Sent!", Toast.LENGTH_SHORT).show();
-            // You can add more functionality to send SOS alerts or notifications
         });
     }
 

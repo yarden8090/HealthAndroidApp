@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Activity;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.R;
 import com.example.myapplication.adapter.DiseaseAdapter;
 import com.example.myapplication.modal.Disease;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,7 +20,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity  extends AppCompatActivity {
+public class General  extends AppCompatActivity {
 
     private RecyclerView recyclerViewDiseases;
     private DiseaseAdapter diseaseAdapter;
@@ -31,9 +32,11 @@ public class MainActivity  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        // Initialize RecyclerView and set its layout manager
         recyclerViewDiseases = findViewById(R.id.recyclerViewDiseases);
         recyclerViewDiseases.setLayoutManager(new LinearLayoutManager(this));
 
+        // Initialize the list and the adapter for the RecyclerView
         diseases = new ArrayList<>();
         diseaseAdapter = new DiseaseAdapter(diseases);
         recyclerViewDiseases.setAdapter(diseaseAdapter);
@@ -45,6 +48,7 @@ public class MainActivity  extends AppCompatActivity {
         fetchDataFromFirestore();
     }
 
+    //db
     private void fetchDataFromFirestore() {
         db.collection("diseases")
                 .get()
@@ -62,7 +66,7 @@ public class MainActivity  extends AppCompatActivity {
                                 diseases.add(disease);
                             }
 
-                            // Notify adapter of data changes
+                            // Notify the adapter that the dataset has changed, so it can refresh the RecyclerView to reflect the updated data
                             diseaseAdapter.notifyDataSetChanged();
                         } else {
                             Log.w("Firestore", "Ërror getting documents.", task.getException());

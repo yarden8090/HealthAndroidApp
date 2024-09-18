@@ -7,12 +7,8 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,11 +35,11 @@ public class Feadback extends AppCompatActivity {
     private Button btnSubmitFeedback;
     private DatabaseReference reviewsReference;
     private FirebaseAuth mAuth;
-    private String userId;
+    private String user_key;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_feadback);
 
 
@@ -51,10 +47,11 @@ public class Feadback extends AppCompatActivity {
         ratingBar = findViewById(R.id.ratingBar);
         btnSubmitFeedback = findViewById(R.id.btnSubmitFeedback);
 
-        mAuth = FirebaseAuth.getInstance();
-        userId = mAuth.getCurrentUser().getUid();
 
-        reviewsReference = FirebaseDatabase.getInstance().getReference("Reviews");
+        mAuth = FirebaseAuth.getInstance();
+        user_key = mAuth.getCurrentUser().getUid(); //user key
+
+        reviewsReference = FirebaseDatabase.getInstance().getReference("Reviews"); //reviews root
 
         btnSubmitFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,8 +74,9 @@ public class Feadback extends AppCompatActivity {
             reviewData.put("feedback", feedback);
             reviewData.put("rating", rating);
 
-            // Store the feedback in the Firebase Realtime Database under the userId
-            reviewsReference.child(userId).setValue(reviewData).addOnCompleteListener(new OnCompleteListener<Void>() {
+            // Store the feedback in the Firebase Realtime Database under the user key
+            //using root
+            reviewsReference.child(user_key).setValue(reviewData).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
@@ -105,10 +103,20 @@ public class Feadback extends AppCompatActivity {
                     reviewList.add(review);
                 }
                 // Setup the RecyclerView with the reviews
+
+                // Create an instance of ReviewAdapter with the reviewList to be used by the adapter
                 ReviewAdapter adapter = new ReviewAdapter(reviewList);
+
                 RecyclerView recyclerView = findViewById(R.id.rvReviews);
+
+                // Set the LayoutManager to determine how items will be displayed in the RecyclerView
+                // LinearLayoutManager arranges items in a vertical list (or horizontal if specified)
                 recyclerView.setLayoutManager(new LinearLayoutManager(Feadback.this));
+
+                // Set the adapter for the RecyclerView to manage and display the data
+                // The adapter is responsible for creating item views and binding data to the RecyclerView
                 recyclerView.setAdapter(adapter);
+
             }
 
             @Override

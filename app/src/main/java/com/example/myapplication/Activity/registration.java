@@ -29,7 +29,7 @@ import com.google.firebase.storage.StorageReference;
 public class registration extends AppCompatActivity {
 
     // Constant for image pick request
-    private static final int PICK_IMAGE_REQUEST = 1;
+    private static final int PICK_IMAGE_REQUEST =1;
 
     // Declare input fields and buttons
     private EditText editTextEmail, editTextPassword, editTextName, editTextPhone, editTextHeight, editTextWeight, editTextEmergencyContact, editTextLocation;
@@ -45,8 +45,6 @@ public class registration extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Inflate and set the layout for the registration page
         setContentView(R.layout.activity_registration);
 
         // Initialize Firebase services
@@ -54,7 +52,6 @@ public class registration extends AppCompatActivity {
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Users"); // Reference to "Users" node in the Realtime Database
         mStorageRef = FirebaseStorage.getInstance().getReference("uploads"); // Reference to "uploads" folder in Firebase Storage
 
-        // Bind input fields and buttons to their respective views in the layout
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
         editTextName = findViewById(R.id.editTextName);
@@ -78,6 +75,8 @@ public class registration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openFileChooser(); // Opens a file chooser to select an image
+                Toast.makeText(registration.this, "photo uploaded", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -86,6 +85,8 @@ public class registration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 registerUser(); // Registers a new user with email and password
+                Intent intent = new Intent(registration.this, login.class);
+                startActivity(intent);
             }
         });
     }
